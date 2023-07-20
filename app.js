@@ -1,6 +1,12 @@
 //import { getDatabase, ref, set } from "firebase/database";
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('generated-story').innerText.length < 100) {
+        document.getElementById('save-to-pdf').style.visibility = 'hidden'
+    }
+    else {
+        document.getElementById('save-to-pdf').style.visibility = 'visible'
+    }
 
     const storyForm = document.getElementById('story-form');
 
@@ -27,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const storyText = await generateStory(prompt);
         document.getElementById('generated-story').innerText = storyText;
+        document.getElementById('save-to-pdf').style.visibility = 'visible'
     });
 });
 
