@@ -1,0 +1,93 @@
+
+<script src="https://unpkg.com/whatwg-fetch@latest"></script>
+<script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-database.js"></script>
+
+<script>
+    
+</script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
+    <title>Story Generator</title>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto">
+        <div id="input-form" class="p-4">
+            <form id="story-form">
+                <div>
+                    <label for="exhibit" class="block">Exhibit:</label>
+                    <select id="exhibit" class="block w-full bg-gray-800 text-white mt-1 p-2">
+                        <option value="dentures">False Teeth</option>
+                        <option value="cuisine">Malaysian Heritage Cuisine</option>
+                        <option value="kasut manek">Kasut Manek</option>
+                        <option value="keronchong music">Keronchong Music</option>
+                    </select>
+                </div>
+                <div class="mt-4">
+                    <label for="reader-age" class="block">Reader Age:</label>
+                    <input id="reader-age" type="number" min="1" value="18"
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="word-count" class="block">Word Count:</label>
+                    <input id="word-count" type="number" min="100" value="500"
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="moft-keywords" class="block">Museum of False Teeth:</label>
+                    <input id="moft-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="food-keywords" class="block">Family Legacies & Street Food:</label>
+                    <input id="food-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="music-keywords" class="block">The Sounds of Keronchong Melaka:</label>
+                    <input id="music-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="manek-keywords" class="block">Preserving the Art of Manek:</label>
+                    <input id="manek-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div class="mt-4">
+                    <label for="fishing-keywords" class="block">Fishing the Portuguese Way:</label>
+                    <input id="fishing-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <!-- <div class="mt-4">
+                    <label for="num-keywords" class="block">Number of Keywords:</label>
+                    <input id="num-keywords" type="number" min="1" max="5" value="1"
+                        class="block w-full bg-gray-800 text-white mt-1 p-2">
+                </div>
+                <div id="keywords-container" class="mt-4">
+                    <div class="keyword-input">
+                        <label for="keyword" class="block">Keywords:</label>
+                        <input id="keyword" type="text" class="block w-full bg-gray-800 text-white mt-1 p-2">
+                    </div>
+                </div> -->
+                <button type="submit" class="mt-4 bg-purple-500 hover:bg-purple-600 px-4 py-2 text-white">Generate
+                    Story</button>
+            </form>
+        </div>
+        <div id="story-display" class="mt-4 p-4">
+            <h2 class="text-2xl font-bold mb-4">Generated Story:</h2>
+            <div id="generated-story" class="bg-gray-800 p-4 rounded text-white whitespace-pre-wrap">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
