@@ -1,5 +1,7 @@
-
 <script src="https://unpkg.com/whatwg-fetch@latest"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+<script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,24 +61,16 @@
                     <input id="fishing-keywords" type="text" placeholder="Separate each keyword or phrase with a comma."
                         class="block w-full bg-gray-800 text-white mt-1 p-2">
                 </div>
-                <!-- <div class="mt-4">
-                    <label for="num-keywords" class="block">Number of Keywords:</label>
-                    <input id="num-keywords" type="number" min="1" max="5" value="1"
-                        class="block w-full bg-gray-800 text-white mt-1 p-2">
-                </div>
-                <div id="keywords-container" class="mt-4">
-                    <div class="keyword-input">
-                        <label for="keyword" class="block">Keywords:</label>
-                        <input id="keyword" type="text" class="block w-full bg-gray-800 text-white mt-1 p-2">
-                    </div>
-                </div> -->
                 <button type="submit" class="mt-4 bg-purple-500 hover:bg-purple-600 px-4 py-2 text-white">Generate
                     Story</button>
+                <button onclick="saveAsPDF()" class="mt-4 bg-purple-500 hover:bg-purple-600 px-4 py-2 text-white">Save as PDF</button>
             </form>
         </div>
         <div id="story-display" class="mt-4 p-4">
             <h2 class="text-2xl font-bold mb-4">Generated Story:</h2>
-            <div id="generated-story" class="bg-gray-800 p-4 rounded text-white whitespace-pre-wrap">
+            <div class="story">
+                <div id="generated-story" class="bg-gray-800 p-4 rounded text-white whitespace-pre-wrap">
+                </div>
             </div>
         </div>
     </div>
