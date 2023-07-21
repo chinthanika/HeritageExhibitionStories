@@ -78,7 +78,7 @@ async function generateStory(prompt) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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'
+            'Authorization': 'Bearer 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'
         },
         body: JSON.stringify({
             model: 'text-davinci-003',
